@@ -1,0 +1,17 @@
+package be.businesstraining.repository;
+
+import java.util.List;
+
+import be.businesstraining.domain.Customer;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+
+import org.springframework.data.repository.CrudRepository;
+
+public interface CustomerRepository extends CrudRepository<Customer, Long> {
+
+    List<Customer> findByLastName(String lastName);
+
+    Customer findById(long id);
+}
